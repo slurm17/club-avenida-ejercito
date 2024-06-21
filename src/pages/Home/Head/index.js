@@ -24,7 +24,7 @@ const Head = () => {
             <FacebookIcon/>
             <WhatsAppIcon/>
         </Box>
-        <img src={ImgLogo} height={'75px'} width={'60px'} style={{zIndex: 5}}/>
+        <img alt='logo' src={ImgLogo} height={'75px'} width={'60px'} style={{zIndex: 5}}/>
     </Box>
 
     {/* <Box sx={{

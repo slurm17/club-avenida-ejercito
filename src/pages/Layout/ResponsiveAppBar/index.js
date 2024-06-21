@@ -43,7 +43,7 @@ function ResponsiveAppBar() {
     <AppBar position="sticky" sx={{height: '70px', display: 'none', backgroundColor: 'red', /*color: '#FEFE00'*/ color:'#000'}}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <img src={ImgLogo} height={'70px'} width={'45px'}/>
+          <img alt='logo' src={ImgLogo} height={'70px'} width={'45px'}/>
           {/* <AbcIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} /> */}
           {/* <Typography
             variant="h6"
