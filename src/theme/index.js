@@ -1,9 +1,9 @@
 import { createTheme } from '@mui/material/styles'
 
 export const returnTheme = () => {
-  const colorPrimaryMain = '#19212b'
+  const colorPrimaryMain = 'red'
   const colorPrimaryContrastText = '#ffffff'
-  const colorSecondaryMain = '#D57800'
+  const colorSecondaryMain = '#FEFE00'
   const colorText = '#000000'
   const colorError = '#d32f2f'
   const fontFamily = "'Roboto', 'Helvetica', 'Arial', sans-serif"
@@ -116,9 +116,10 @@ export const returnTheme = () => {
         }
       },
       body: {
+        margin: 0,
         fontSize: '0.875rem',
         lineHeight: 1.43,
-        letterSpacing: '0.01071em'
+        letterSpacing: '0.01071em',
       },
       MuiSnackbarContent: {
         action: {

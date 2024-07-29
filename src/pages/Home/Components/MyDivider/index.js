@@ -4,7 +4,7 @@ import React from 'react'
 
 const MyDivider = () => {
   return (
-    <Grid2 container sx={{position: 'relative'}}>
+    <Grid2 container sx={{position: 'relative', display: {xs: 'flex', sm: 'none'}}}>
         <Box sx={{
           backgroundColor: 'black',
           height: '15px',
