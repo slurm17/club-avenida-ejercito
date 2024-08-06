@@ -2,26 +2,40 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 // import ResponsiveAppBar from './ResponsiveAppBar'
 import { Box } from '@mui/material'
+import Footer from 'pages/Home/Footer'
+import Head from 'pages/Home/Head'
 // import ImgBackgound from 'assets/img/background.png'
 
 const Layout = () => {
   return (
+    <>
+    <Head/>
     <Box 
       sx={{
         width: '100%',
-        background: ' linear-gradient(0deg, rgba(0,0,0,1) 54%, rgba(5,0,0,1) 50%, rgba(254,0,0,1) 87%);',
-        // background: 'linear-gradient(0deg, rgba(254,254,0,1) 10%, rgba(254,0,0,1) 61%);',
-        // backgroundImage: `url(${ImgBackgound})`,
-        // height: '1000px',
-        // backgroundSize: 'cover',
-        // backgroundPosition: 'center center',
-        // backgroundRepeat: 'no-repeat',
+        backgroundColor: '#000',
+        position: 'relative'
         }}>
-      {/* <ResponsiveAppBar/> */}
+        <Box sx={{ 
+          position: 'absolute', 
+          bottom: 0, 
+          height: '200px', 
+          background: 'linear-gradient(180deg, rgba(0,0,0,1) 5%, rgba(255,255,0,1) 92%);',
+          width: '100%'
+        }}/>
+        <Box sx={{ 
+          position: 'absolute', 
+          top: 0, 
+          height: '200px', 
+          background: 'linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(255,0,0,1) 94%);',
+          width: '100%'
+        }}/>
       <main>
           <Outlet/>
       </main>
     </Box>
+    <Footer/>
+    </>
   )
 }
 
