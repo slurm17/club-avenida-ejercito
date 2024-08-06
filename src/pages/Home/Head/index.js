@@ -15,14 +15,15 @@ const Head = () => {
             display: 'flex',
             placeItems: 'center',
             height: '100%',
+            // marginLeft: '15px',
             '> *': {
                 // width: '40px'
                 padding: '3px'
             },
             position: 'absolute',
-            left: 0
+            left: 5
         }}>
-            <InstagramIcon sx={{fontSize: fontSize }} onClick={()=>{alert('estoy')}}/>
+            <InstagramIcon sx={{fontSize: fontSize }}/>
             <FacebookIcon sx={{fontSize: fontSize}}/>
             <WhatsAppIcon sx={{fontSize: fontSize}}/>
         </Box>
