@@ -6,22 +6,23 @@ const Panel = ({img='', text='', dividerBottom= true}) => {
   const theme = useTheme()
   const mobile = useMediaQuery(theme.breakpoints.down('sm'))
   return (
-    <Grid item xs={12} lg={6} sx={{
-      display: {sx: 'block', sm: 'flex'},
+    <Grid item xs={12} sx={{
+      display: 'flex',
       justifyContent: 'center',
       alignItems: 'center',
-      marginTop: {sx: 0, sm: 5}, 
+      // marginTop: {sx: 0, sm: 5}, 
     }}>
         <Box sx={{
-          height: mobile ? '200px' : '250px' ,
+          height:'230px' ,
           backgroundImage: `url(${img})`,
           backgroundSize: 'cover',
           backgroundPosition: 'center center',
           backgroundRepeat: 'no-repeat',
           position: 'relative',
-          borderRadius: mobile ? '0px' : '5px',
+          borderRadius: '10px',
           maxWidth: '550px',
-          width: '100%'
+          width: '100%',
+          boxShadow: '0px 5px 10px 1px rgba(255,255,255,0.35)'
           }}>
         <Box sx={{
           height: '100%',
@@ -30,7 +31,7 @@ const Panel = ({img='', text='', dividerBottom= true}) => {
           zIndex: 2,
           content:"''",
           position: 'absolute',
-          borderRadius: mobile ? '0px' : '3px',
+          borderRadius: '7px',
           top: 0,
           bottom: 0,
           left: 0,
@@ -44,13 +45,13 @@ const Panel = ({img='', text='', dividerBottom= true}) => {
               color: '#fff',
               fontWeight: '700',
               zIndex:5,
-              fontSize: '2.2em'
+              fontSize: '1.9em'
           }}
           >
             {text}
           </Typography>
       </Box>
-      {dividerBottom && <MyDivider/>}
+      {/* {dividerBottom && <MyDivider/>} */}
     </Grid>
     
   )

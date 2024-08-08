@@ -2,8 +2,8 @@ import React from 'react'
 import { Outlet } from 'react-router-dom'
 // import ResponsiveAppBar from './ResponsiveAppBar'
 import { Box } from '@mui/material'
-import Footer from 'pages/Home/Footer'
-import Head from 'pages/Home/Head'
+import Footer from 'pages/Layout/Footer'
+import Head from 'pages/Layout/Head'
 // import ImgBackgound from 'assets/img/background.png'
 
 const Layout = () => {

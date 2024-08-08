@@ -1,5 +1,5 @@
 import React from 'react'
-import { Route, Navigate, Routes as Routs } from 'react-router-dom'
+import { Route, Routes as Routs } from 'react-router-dom'
 import * as ROUTES from 'constants/routes'
 import Layout from 'pages/Layout'
 import Home from 'pages/Home'
