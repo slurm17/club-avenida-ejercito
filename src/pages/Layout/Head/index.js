@@ -4,9 +4,11 @@ import InstagramIcon from '@mui/icons-material/Instagram'
 import FacebookIcon from '@mui/icons-material/Facebook'
 import WhatsAppIcon from '@mui/icons-material/WhatsApp'
 import ImgLogo from 'assets/img/escudo-club-ejercito.png'
-
+import { useNavigate } from 'react-router-dom'
+import * as ROUTES from 'constants/routes'
 const Head = () => {
     const fontSize = '28px'
+    const navigate = useNavigate()
   return (
     <>
     <Box sx={{width: '100%', height: '10px', backgroundColor: '#FEFE00'}}/>
@@ -27,7 +29,17 @@ const Head = () => {
             <FacebookIcon sx={{fontSize: fontSize}}/>
             <WhatsAppIcon sx={{fontSize: fontSize}}/>
         </Box>
-        <img alt='logo' src={ImgLogo} width={'68px'} style={{zIndex: 5, marginTop: '12px'}}/>
+        <Box 
+            component={'img'} 
+            alt='logo' 
+            src={ImgLogo} 
+            width={'68px'} 
+            sx={{
+                zIndex: 5, 
+                marginTop: '12px'
+            }}
+            onClick={()=>{navigate(ROUTES.LANDING)}}
+        />
     </Box>
     </>
   )

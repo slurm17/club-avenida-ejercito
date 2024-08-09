@@ -1,16 +1,20 @@
-import { Box, Grid, Typography, useMediaQuery, useTheme } from '@mui/material'
+import { Box, Grid, Typography } from '@mui/material'
 import React from 'react'
-import MyDivider from '../MyDivider'
+import { useNavigate } from 'react-router-dom'
 
-const Panel = ({img='', text='', dividerBottom= true}) => {
-  const theme = useTheme()
-  const mobile = useMediaQuery(theme.breakpoints.down('sm'))
+const Panel = ({img='', text='', ruta = ''}) => {
+  // const theme = useTheme()
+  const navigate = useNavigate()
+  // const mobile = useMediaQuery(theme.breakpoints.down('sm'))
   return (
-    <Grid item xs={12} sx={{
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      // marginTop: {sx: 0, sm: 5}, 
+    <Grid item xs={12} 
+      component={'article'}
+      onClick={() => navigate(ruta)}
+      sx={{
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        // marginTop: {sx: 0, sm: 5}, 
     }}>
         <Box sx={{
           height:'230px' ,
